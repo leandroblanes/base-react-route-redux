@@ -1,0 +1,27 @@
+.login {
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            width: 300px;
+    
+            input:first-child {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+    
+            input:last-child {
+                border-top: 0;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+    }
+}
