@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector } from 'react-redux'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,7 +18,9 @@ const Login = React.lazy(() => import('./views/Login/Login'));
 const Layout = React.lazy(() => import('./views/Layout'));
 
 function App() {
-  const [logado, setLogado] = useState(true)
+  const logado = useSelector(state => state.logado)
+
+  console.log(logado)
 
   return (
     <Router>
