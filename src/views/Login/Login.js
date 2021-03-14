@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Form, Button, Container } from 'react-bootstrap/'
+import { Form, Button } from 'react-bootstrap/'
 
 import { useDispatch } from "react-redux"
 import './Login.scss'
@@ -32,18 +32,16 @@ const Login = props => {
 
     return (
         <div className="login">
-            <Container>
-                <Form onSubmit={enviar}>
-                    <h3 className="mb-4 mt-0 text-center">Identifique-se</h3>
-                    <Form.Group controlId="formLogin">
-                        <Form.Control type="text" value={dados.login} onChange={(el) => alterar('login', el.target.value)} placeholder="CPF ou CNPJ" />
-                        <Form.Control type="password" value={dados.senha} onChange={(el) => alterar('senha', el.target.value)} placeholder="Senha" />
-                    </Form.Group>
-                    <div className="text-center">
-                        <Button type="submit" color="primary" block>Entrar</Button>
-                    </div>
-                </Form>
-            </Container>
+            <Form onSubmit={enviar}>
+                <h3 className="mb-4 mt-0 text-center">Identifique-se</h3>
+                <Form.Group controlId="formLogin">
+                    <Form.Control type="text" value={dados.login} onChange={(el) => alterar('login', el.target.value)} placeholder="CPF ou CNPJ" />
+                    <Form.Control type="password" value={dados.senha} onChange={(el) => alterar('senha', el.target.value)} placeholder="Senha" />
+                </Form.Group>
+                <div className="text-center">
+                    <Button type="submit" color="primary" block>Entrar</Button>
+                </div>
+            </Form>
         </div>
     )
 }
